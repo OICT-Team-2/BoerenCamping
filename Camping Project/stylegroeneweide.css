@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.title /* De Groene Weide titel */ {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  color: #fca311;
+  right: 300px;
+  z-index: 1;
+}
+
+.bg-img {
+  background-image: url("imagesGroeneWeide/boerderijphoto.jpeg");
+  min-height: 560px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+ul {
+ 
+  list-style-type: none;
+  left: 900px;
+  margin: 10px;
+  padding: 0px;
+  height: 60px;
+  width: 100%;
+  border-radius: 100px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #439a86;
+ display: flex;
+  z-index: 2;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #fca311;
+  text-align: center;
+  font-size: 30px;
+  padding: 14px 45px;
+  text-decoration: none;
+  transition: background-color 1s ease-out;
+}
+li a:hover {
+  background-color: #50c878;
+}
