@@ -15,9 +15,14 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $voornaam = $_POST["voornaam"];
     $achternaam = $_POST["achternaam"];
+    $straatnaam = $_POST["straatnaam"];
+    $stad = $_POST["stad"];
+    $postcode = $_POST["postcode"];
+    $huisnummer = $_POST["huisnummer"];
+    $telefoonnummer = $_POST["telefoonnummer"];
 
     // Data in de database zetten
-    $sql = "INSERT INTO reservation_data (voornaam, achternaam) VALUES ('$voornaam', '$achternaam')";
+    $sql = "INSERT INTO reservation_data (voornaam, achternaam, straatnaam, stad, postcode, huisnummer, telefoonnummer) VALUES ('$voornaam', '$achternaam', '$straatnaam', '$stad', '$postcode', '$huisnummer', '$telefoonnummer')";
     
     if ($conn->query($sql) === TRUE) {
         echo "Nieuwe registratie aangemaakt";
