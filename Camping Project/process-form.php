@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $voornaam = $_POST["voornaam"];
     $achternaam = $_POST["achternaam"];
-    $stad = $_POST["stad"];
+    $plaats = $_POST["plaats"];
     $postcode = $_POST["postcode"];
     $straatnaam = $_POST["straatnaam"];
     $huisnummer = $_POST["huisnummer"];
@@ -24,13 +24,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Data in de database zetten
     $sql = "INSERT INTO reservation_data (voornaam, achternaam, straatnaam, stad, postcode, huisnummer, telefoonnummer, email) VALUES ('$voornaam', '$achternaam', '$straatnaam', '$stad', '$postcode', '$huisnummer', '$telefoonnummer', '$email')";
-    
+
     if ($conn->query($sql) === TRUE) {
         echo "Nieuwe registratie aangemaakt";
+        sleep(3);
+
+        // Redirect to a specific URL
+        header("Location: www.groeneweidecamping.nl");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 
 $conn->close();
+exit();
 ?>
