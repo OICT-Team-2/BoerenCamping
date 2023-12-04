@@ -1,5 +1,5 @@
 <?php
-$servername = "145.89.192.235";
+$servername = "localhost";
 $username = "max";
 $password = "Max=12345";
 $dbname = "camping_database";
