@@ -1,8 +1,8 @@
 <?php
-$servername = "camping_database";
+$servername = "145.89.192.235";
 $username = "max";
 $password = "Max=12345";
-$dbname = "reservation_data";
+$dbname = "camping_database";
 
 // Connectie creëren
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $achternaam = $_POST["achternaam"];
 
     // Data in de database zetten
-    $sql = "INSERT INTO people (voornaam, achternaam) VALUES ('$voornaam', '$achternaam')";
+    $sql = "INSERT INTO reservation_data (voornaam, achternaam) VALUES ('$voornaam', '$achternaam')";
     
     if ($conn->query($sql) === TRUE) {
         echo "Nieuwe registratie aangemaakt";
