@@ -2,82 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klant Gegevens</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Klant Gegevens Formulier</title>
 </head>
 
 <body>
-  <form action="process-form.php" method="post">
-    <table>
-      <tr>
-        <td>
-          Naam:
-        </td>
-        <td>
-          <input type="text" placeholder="voornaam" name="voornaam">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          achternaam:
-        </td>
-        <td>
-          <input type="text" placeholder="achternaam" name="achternaam">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Plaats
-        </td>
-        <td>
-          <input type="text" placeholder="Stad" name="stad">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Postcode
-        </td>
-        <td>
-          <input type="text" placeholder="Postcode" name="postcode">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          straat
-        </td>
-        <td>
-          <input type="text" placeholder="Straat" name="straatnaam">
-        </td>
-      <tr>
-        <td>
-          Huisnummer
-        </td>
-        <td>
-          <input type="text" placeholder="Huisnummer" name="huisnummer">
-        </td>
-      <tr>
-        <td>
-          Telefoon
-        </td>
-        <td>
-          <input type="text" placeholder="Telefoon" name="telefoonnummer">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Email
-        </td>
-        <td>
-          <input type="text" placeholder="Email" name="email">
-        </td>
-      </tr>
-      <tr>
-      </tr>
-      </tr>
-      <input type="submit" value="submit">
-    </table>
-  </form>
+   <header>
+      <h1>Klantgegevens Formulier</h1>
+   </header>
+   <main>
+      <form action="process-form.php" method="post">
+         <fieldset>
+            <legend>Persoonlijke Informatie</legend>
+
+            <label for="voornaam">Voornaam:</label>
+            <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
+
+            <label for="achternaam">Achternaam:</label>
+            <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam" required>
+
+            <label for="stad">Plaats:</label>
+            <input type="text" id="stad" name="stad" placeholder="Stad">
+
+            <label for="postcode">Postcode:</label>
+            <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+
+            <label for="straatnaam">Straat:</label>
+            <input type="text" id="straatnaam" name="straatnaam" placeholder="Straat">
+
+            <label for="huisnummer">Huisnummer:</label>
+            <input type="text" id="huisnummer" name="huisnummer" placeholder="Huisnummer">
+
+            <label for="telefoonnummer">Telefoon:</label>
+            <input type="text" id="telefoonnummer" name="telefoonnummer" placeholder="Telefoon">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+         </fieldset>
+
+         <input type="submit" value="Verzenden">
+      </form>
+   </main>
 </body>
 
 </html>
