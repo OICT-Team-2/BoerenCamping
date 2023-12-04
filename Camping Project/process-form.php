@@ -1,8 +1,8 @@
 <?php
-$servername = "groeneweide";
+$servername = "camping_database";
 $username = "max";
-$password = "Max=12345;
-$dbname = "database_voor_namen";
+$password = "Max=12345";
+$dbname = "reservation_data";
 
 // Connectie creëren
 $conn = new mysqli($servername, $username, $password, $dbname);
