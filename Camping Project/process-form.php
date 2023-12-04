@@ -15,9 +15,9 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $voornaam = $_POST["voornaam"];
     $achternaam = $_POST["achternaam"];
-    $straatnaam = $_POST["straatnaam"];
     $stad = $_POST["stad"];
     $postcode = $_POST["postcode"];
+    $straatnaam = $_POST["straatnaam"];
     $huisnummer = $_POST["huisnummer"];
     $telefoonnummer = $_POST["telefoonnummer"];
     $email = $_POST["email"];
