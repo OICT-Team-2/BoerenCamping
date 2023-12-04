@@ -20,9 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $postcode = $_POST["postcode"];
     $huisnummer = $_POST["huisnummer"];
     $telefoonnummer = $_POST["telefoonnummer"];
+    $email = $_POST["email"];
 
     // Data in de database zetten
-    $sql = "INSERT INTO reservation_data (voornaam, achternaam, straatnaam, stad, postcode, huisnummer, telefoonnummer) VALUES ('$voornaam', '$achternaam', '$straatnaam', '$stad', '$postcode', '$huisnummer', '$telefoonnummer')";
+    $sql = "INSERT INTO reservation_data (voornaam, achternaam, straatnaam, stad, postcode, huisnummer, telefoonnummer, email) VALUES ('$voornaam', '$achternaam', '$straatnaam', '$stad', '$postcode', '$huisnummer', '$telefoonnummer', '$email')";
     
     if ($conn->query($sql) === TRUE) {
         echo "Nieuwe registratie aangemaakt";
