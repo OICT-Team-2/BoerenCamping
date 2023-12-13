@@ -22,7 +22,8 @@ try {
         $email = $_POST["email"];
 
         // Prepareer een SQL statement
-        $stmt = $conn->prepare("INSERT INTO reservation_data (voornaam, achternaam, straatnaam, plaats, postcode, huisnummer, telefoonnummer, email) VALUES (:voornaam, :achternaam, :straatnaam, :plaats, :postcode, :huisnummer, :telefoonnummer, :email)");
+        $stmt = $conn->prepare("INSERT INTO reservation_data (voornaam, achternaam, straatnaam, plaats, postcode, huisnummer, telefoonnummer, email) 
+        VALUES (:voornaam, :achternaam, :straatnaam, :plaats, :postcode, :huisnummer, :telefoonnummer, :email)");
 
         // Bind parameters
         $stmt->bindParam(':voornaam', $voornaam);
