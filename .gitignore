@@ -23,7 +23,7 @@ __pycache__/
 sessions/
 
 # Virtual environment
-venv/
+# venv/
 env/
 
 # Log files
