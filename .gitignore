@@ -23,7 +23,7 @@ __pycache__/
 sessions/
 
 # Virtual environment
-venv/Scripts/
+venv\Scripts\
 env/
 
 # Log files
