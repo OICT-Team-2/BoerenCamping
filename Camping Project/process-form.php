@@ -26,23 +26,45 @@ try {
         VALUES (:voornaam, :achternaam, :straatnaam, :plaats, :postcode, :huisnummer, :telefoonnummer, :email)");
 
         // Bind parameters
-        $stmt->bindParam(':voornaam', $voornaam);
-        $stmt->bindParam(':achternaam', $achternaam);
+        $patroon = '/[^a-zA-Z0-9]/';
+        if (!preg_match($patroon, $voornaam)) {
+            // Goed
+            $voornaam_schoon = preg_replace($patroon, '', $voornaam);
+        } else {
+            // Slecht
+            echo ("Ongeldig karakter gedetecteerd!");
+            exit();
+        }
+        if (!preg_match($patroon, $achternaam)) {
+            // Goed
+            $achternaam_schoon = preg_replace($patroon, '', $achternaam);
+        } else {
+            // Slecht
+            echo ("Ongeldig karakter gedetecteerd!");
+            exit();
+        }
+
+        $stmt->bindParam(':voornaam', $voornaam_schoon);
+        $stmt->bindParam(':achternaam', $achternaam_schoon);
         $stmt->bindParam(':plaats', $plaats);
         $stmt->bindParam(':postcode', $postcode);
         $stmt->bindParam(':straatnaam', $straatnaam);
         $stmt->bindParam(':huisnummer', $huisnummer);
         $stmt->bindParam(':telefoonnummer', $telefoonnummer);
-        $stmt->bindParam(':email', $email);
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $stmt->bindParam(':email', $email);
+        } else {
+            echo ("Ongeldig email adress");
+        }
 
         // Voer het statement uit
         $stmt->execute();
 
-        echo "Nieuwe registratie aangemaakt";
-        sleep(3);
+        echo ("Nieuwe registratie aangemaakt");
+        // sleep(3);
 
         // Doorverwijzen naar home(?)
-        header("Location: index.html");
+        // header("Location: index.html");
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
