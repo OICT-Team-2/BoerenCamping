@@ -63,7 +63,8 @@ ul {
 
 input,
 textarea {
-  width: calc(100% - 12px); /* Adjusted for padding */
+  width: calc(100% - 12px);
+  /* Adjusted for padding */
   border-radius: 0.3rem;
   background-color: #dde2e1;
   color: black;
