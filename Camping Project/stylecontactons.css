@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.logoimage {
+  position: relative;
+  top: 0px;
+  align-items: center;
+  right: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar {
+  background-color: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 35px;
+  right: 10px;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.bar {
+  height: 100px;
+  width: 100%;
+  background-color: #00796b;
+}
+
+.contactons {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.form {
+  width: 50%;
+  top: -10px;
+  position: relative;
+  left: -360px;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+input,
+textarea {
+  width: calc(100% - 12px); /* Adjusted for padding */
+  border-radius: 0.3rem;
+  background-color: #dde2e1;
+  color: black;
+  padding: 6px;
+  margin: 6px 0px;
+  outline: none;
+  border: none;
+  transition: right 0.5s ease;
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: black;
+  resize: none;
+}
+
+#Btn {
+  width: 100px;
+  padding: 6px;
+  position: inherit;
+  border: none;
+  right: 250px;
+  font-weight: bold;
+  color: black;
+  background-color: #fca311;
+  cursor: pointer;
+  border-radius: 0.8rem;
+}
+
+.hebjevraag,
+.ContactEmail {
+  margin-left: 70px;
+}
+
+.google-map {
+  position: absolute;
+  left: 800px;
+  top: 330px;
+}
