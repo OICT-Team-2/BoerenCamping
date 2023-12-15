@@ -90,7 +90,7 @@ input[type="submit"]:hover {
 }
 
 .bg-img {
-  background-image: url("imagesGroeneWeide/boerderijphoto.jpeg");
+  background-image: url("images/boerderijphoto.jpeg");
   min-height: 560px;
   background-position: center;
   background-repeat: no-repeat;

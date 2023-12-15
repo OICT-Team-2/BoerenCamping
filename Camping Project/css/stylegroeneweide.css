@@ -5,7 +5,8 @@
 }
 
 body {
-  height: 200vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 h1 {
@@ -26,6 +27,12 @@ a {
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  transition: 0.5s;
+  color: #fca311;
 }
 
 ul {
@@ -137,19 +144,29 @@ li a:hover {
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  color: white;
+  top: -180px;
+  font-size: 30px;
+  position: relative;
   text-align: center;
   padding: 1em 0;
 }
 
 main {
   max-width: 600px;
+  top: -160px;
+  position: relative;
   margin: 20px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  padding: 1px;
+}
+
+legend {
+  text-align: center;
+  width: auto;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 form {
@@ -158,10 +175,12 @@ form {
 }
 
 fieldset {
-  border: 1px solid #ccc;
+  border: 3px solid;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 15px;
+  margin: 15px auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 label {
@@ -180,11 +199,30 @@ input {
 }
 
 input[type="submit"] {
-  background-color: #333;
+  background-color: #00796b;
   color: #fff;
   cursor: pointer;
+  margin: 15px auto;
 }
 
 input[type="submit"]:hover {
-  background-color: #555;
+  transition: 1s;
+  background-color: #fca311;
+}
+
+.groeneweidebanner {
+  text-align: center;
+  width: 50%;
+}
+
+.headerText {
+  color: white;
+  top: -180px;
+  left: 50%;
+  font-size: 50px;
+  transform: translateX(-50%);
+  position: relative;
+  text-align: center;
+  padding: 1em 0;
+  width: max-content;
 }

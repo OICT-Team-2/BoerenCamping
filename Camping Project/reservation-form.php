@@ -35,7 +35,7 @@ try {
         // echo ("Nieuwe registratie aangemaakt");
 
         // Doorverwijzen naar klantgegevens
-        header("Location: klantgegevens.html");
+        header("Location: klantgegevens2.html");
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
