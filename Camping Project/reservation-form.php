@@ -23,14 +23,8 @@ try {
         VALUES (:aantal, :type, :aankomst, :vertrek)");
 
         // Bind parameters
-        if (is_int($aantal)) {
-            $stmt->bindParam(':aantal', $aantal);
-        } else {
-            echo ("Wrong value type inserted.");
-            exit();
-        }
+        $stmt->bindParam(':aantal', $aantal);
         $stmt->bindParam(':type', $type);
-        // Validate Input aankomst/vertrek
         $stmt->bindParam(':aankomst', $aankomst);
         $stmt->bindParam(':vertrek', $vertrek);
 
