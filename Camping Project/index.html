@@ -12,9 +12,9 @@
   <div class="navbar">
     <h1>De Groene Weide</h1>
     <ul>
-      <li><a href="#home">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <hr />
-      <li><a href="#reserveren">Reserveren</a></li>
+      <li><a href="index.html">Reserveren</a></li>
       <hr />
       <li><a href="#overons">Over Ons</a></li>
       <hr />
@@ -27,12 +27,19 @@
   <div class="reservationBar">
     <form class="form" action="reservation-form.php" method="post">
       <div class="formItem">
-        <p>Aantal personen</p>
-        <div class="dropdown">
-          <button id="plus">+</button>
-          <button id="minus">-</button>
-          <p id="total" name="aantal">0</p>
-        </div>
+        <label for="aantal">Aantal Personen</label>
+        <select name="aantal" id="aantal">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
       </div>
 
       <div class="formItem">
