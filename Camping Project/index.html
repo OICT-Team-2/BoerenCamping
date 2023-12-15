@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>De Groene Weide</title>
-  <link rel="stylesheet" href="stylegroeneweide.css" />
-  <link rel="icon" type="image/x-icon" href="imagesGroeneWeide/logo-no-background-no-text.ico">
-</head>
-
-<body>
-  <ul>
-    <li><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
-    <li><a href="Klantgegevens.html"><i class="fa fa-fw fa-home"></i>Reserveren</a>
-    <li><a href="#contact"><i class="fa fa-fw fa-user"></i>Contact</a>
-  </ul>
-  <div class="main-content">
-    <div class="bg-img">
-      <form action="/imagesGroeneWeide/boerderijphoto.jpeg">
-      </form>
-      <div class="title">
-        <h1>De Groene Weide</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stylegroeneweide.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>De Groene Weide</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <hr />
+        <li><a href="#reserveren">Reserveren</a></li>
+        <hr />
+        <li><a href="#overons">Over Ons</a></li>
+        <hr />
+        <li><a href="#contact">Contact</a></li>
+        <hr />
+      </ul>
+    </div>
+    <img
+      id="bghome"
+      src="imagesGroeneWeide/background_homescreen.png"
+      alt="imagesGroeneWeide/background_homescreen.png"
+    />
+    <form action="reservation-form.php" method="post">
+    <div class="mom">
+      <div class="child">
+        <p>Aantal personen</p>
+      <div class="dropdown">
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+        <p id="total" name="aantal">0</p>
       </div>
     </div>
-    <br>
-    <h1>YOOOO</h1>
-</body>
-
+    <div class="child">
+      <label for="aankomstdatum">aankomstdatum:</label>
+      <input type="date" id="aankomstdatum" name="aankomstdatum" />
+      <label for="vertrekdatum">vertrekdatum:</label>
+      <input type="date" id="vertrekdatum" name="vertrekdatum" />
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Staanplaats</a>
+        <a href="#">Grote staanplaats</a>
+        <a href="#">Camperplaats</a>
+      </div>
+    </div>
+    <div class="child">
+      <div class="zoekbutton">
+        <input type="submit" value="Zoeken">
+        
+        </a>
+      </div>
+    </div>
+ </form>
+  </div>
+    <script src="script.js"></script>
+  </body>
 </html>
