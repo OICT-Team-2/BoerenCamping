@@ -104,7 +104,7 @@ li a:hover {
   display: flex;
   flex-direction: column;
   /* outline: 3px solid red; */
-  width: 300px;
+  width: 15vw;
   margin: 0 5px;
 }
 
