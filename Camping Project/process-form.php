@@ -48,7 +48,16 @@ try {
         $stmt->bindParam(':voornaam', $voornaam_schoon);
         $stmt->bindParam(':achternaam', $achternaam_schoon);
         $stmt->bindParam(':plaats', $plaats);
-        $stmt->bindParam(':postcode', $postcode);
+
+        $postcodePatroon = '/^\d{4} [a-zA-Z]{2}$/';
+        if (!preg_match($postcodePatroon, $postcodePatroon)) {
+            // Goed
+            $stmt->bindParam(':postcode', $postcode);
+        } else {
+            // Slecht
+            echo ("Ongeldig postcode gedetecteerd!");
+            exit();
+        }
         $stmt->bindParam(':straatnaam', $straatnaam);
         $stmt->bindParam(':huisnummer', $huisnummer);
         $stmt->bindParam(':telefoonnummer', $telefoonnummer);
