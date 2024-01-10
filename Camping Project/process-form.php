@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "max";
 $password = "Max=12345";
 $dbname = "camping_database";
+$table = "customer_data";
 
 try {
     // Connectie creëren
@@ -22,7 +23,7 @@ try {
         $email = $_POST["email"];
 
         // Prepareer een SQL statement
-        $stmt = $conn->prepare("INSERT INTO reservation_data (voornaam, achternaam, straatnaam, plaats, postcode, huisnummer, telefoonnummer, email) 
+        $stmt = $conn->prepare("INSERT INTO $table (voornaam, achternaam, straatnaam, plaats, postcode, huisnummer, telefoonnummer, email) 
         VALUES (:voornaam, :achternaam, :straatnaam, :plaats, :postcode, :huisnummer, :telefoonnummer, :email)");
 
         // Bind parameters
@@ -47,7 +48,16 @@ try {
         $stmt->bindParam(':voornaam', $voornaam_schoon);
         $stmt->bindParam(':achternaam', $achternaam_schoon);
         $stmt->bindParam(':plaats', $plaats);
-        $stmt->bindParam(':postcode', $postcode);
+
+        $postcodePatroon = '/^\d{4} [a-zA-Z]{2}$/';
+        if (!preg_match($postcodePatroon, $postcodePatroon)) {
+            // Goed
+            $stmt->bindParam(':postcode', $postcode);
+        } else {
+            // Slecht
+            echo ("Ongeldig postcode gedetecteerd!");
+            exit();
+        }
         $stmt->bindParam(':straatnaam', $straatnaam);
         $stmt->bindParam(':huisnummer', $huisnummer);
         $stmt->bindParam(':telefoonnummer', $telefoonnummer);
@@ -60,11 +70,11 @@ try {
         // Voer het statement uit
         $stmt->execute();
 
-        echo ("Nieuwe registratie aangemaakt");
-        // sleep(3);
+        // User Feedback
+        // echo ("Nieuwe registratie aangemaakt");
 
         // Doorverwijzen naar home(?)
-        // header("Location: index.html");
+        header("Location: index.html");
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();

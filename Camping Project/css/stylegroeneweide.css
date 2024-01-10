@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 35%;
+  color: rgb(27, 53, 36);
+}
+
+a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 10px 5px;
+  margin-right: 20px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  transition: 0.5s;
+  color: #fca311;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  justify-content: end;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  /* outline: 3px solid red; */
+}
+
+li {
+  float: left;
+  display: block;
+  color: rgb(251, 251, 251);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  /* background-color: #a8c4ab; */
+  color: rgb(27, 53, 36);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5%;
+}
+
+.logo {
+  height: 20%;
+  width: 100px;
+}
+
+#bghome {
+  background-size: cover;
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+}
+
+.container_holder {
+  position: sticky;
+  display: flex;
+}
+
+.mom {
+  width: 100%;
+  padding: 0 3%;
+  ;
+  /* Try setting this to 400px or something */
+  display: table;
+  border: 1px solid #444444;
+}
+
+.zoekbutton {
+  margin-top: 5px;
+  /* Decorative .. */
+  background-color: none;
+  min-height: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  margin: 0 5px;
+}
+
+.reservationBar {
+  background-color: #00796B;
+  margin: 0 10%;
+  padding: 0 3%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.reservationBar.sticky {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  transform: translateX(-50%);
+}
+
+.reservationBar>* {
+  color: #ffffff;
+}
+
+.child:first-child .childinner {
+  margin-left: 0;
+}
+
+header {
+  color: white;
+  top: -180px;
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+  padding: 1em 0;
+}
+
+main {
+  max-width: 600px;
+  top: -160px;
+  position: relative;
+  margin: 20px auto;
+  color: black;
+  padding: 1px;
+}
+
+legend {
+  text-align: center;
+  width: auto;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: 3px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #00796b;
+  color: #fff;
+  cursor: pointer;
+  margin: 15px auto;
+}
+
+input[type="submit"]:hover {
+  transition: 1s;
+  background-color: #fca311;
+}
+
+.groeneweidebanner {
+  text-align: center;
+  width: 50%;
+}
+
+.headerText {
+  color: white;
+  top: -180px;
+  left: 50%;
+  font-size: 50px;
+  transform: translateX(-50%);
+  position: relative;
+  text-align: center;
+  padding: 1em 0;
+  width: max-content;
+}
