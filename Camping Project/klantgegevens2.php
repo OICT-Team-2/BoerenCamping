@@ -1,33 +1,7 @@
-<!DOCTYPE html>
-<html lang="nl">
+<?php
+  include("header.php")
+?>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Klantgegevens</title>
-  <link rel="stylesheet" href="css/stylegroeneweide.css" />
-  <link rel="icon" type="image/x-icon" href="images/logo-no-background-no-text.ico" />
-</head>
-
-<body>
-  <div class="navbar">
-    <h1>De Groene Weide</h1>
-    <ul>
-      <li>
-        <a href="https://groeneweidecamping.nl/"><i class="fa fa-fw fa-home"></i>Home</a>
-      </li>
-      <li>
-        <a href="https://groeneweidecamping.nl/"><i class="fa fa-fw fa-home"></i>Reserveren</a>
-      </li>
-      <li>
-        <a href="#over ons"><i class="fa fa-fw fa-over ons"></i>Over ons</a>
-      </li>
-      <li>
-        <a href="#contact"><i class="fa fa-fw fa-contact"></i>Contact</a>
-      </li>
-    </ul>
-  </div>
 
   <img id="bghome" src="images/background_homescreen.png" alt="Background Image" />
   
@@ -67,6 +41,6 @@
       <input type="submit" value="Verzenden">
     </form>
   </main>
-</body>
-
-</html>
+  <?php
+  include("footer.php")
+?>

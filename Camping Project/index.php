@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="nl">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>De Groene Weide</title>
-  <link rel="stylesheet" href="css/stylegroeneweide.css" />
-  <link rel="icon" type="image/x-icon" href="images/logo-no-background-no-text.ico" />
-</head>
-
-<body>
-  <div class="navbar">
-    <h1>De Groene Weide</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <hr />
-      <li><a href="index.html">Reserveren</a></li>
-      <hr />
-      <li><a href="#overons">Over Ons</a></li>
-      <hr />
-      <li><a href="#contact">Contact</a></li>
-      <hr />
-    </ul>
-  </div>
+<!-- regel 2 tot 4 is hoe je een component include -->
+<?php
+  include("header.php")
+?>
   <img id="bghome" src="images/background_homescreen.png" alt="Background Image" />
 
   <div class="reservationBar">
@@ -66,5 +45,7 @@
       </div>
     </form>
   </div>
-  <script src="js/script.js"></script>
-</body>
+ 
+<?php
+  include("footer.php")
+?>
