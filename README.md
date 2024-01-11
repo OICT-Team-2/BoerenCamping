@@ -1,5 +1,5 @@
 # BoerenCamping
-This is the github for Team^2 Boeren Camping Project. Hogeschool Utrecht
+This is the github for Team^2 Boeren Camping Project. Hogeschool Utrecht 2023-24
 
 We are working on creating and hosting a website with reservation system for Semester B project at the HU.
 
