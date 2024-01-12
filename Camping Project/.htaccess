@@ -5,7 +5,7 @@
         Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 	Header always unset X-Powered-By
 	SetEnvIf Unique_ID "(.*)" CSP_NONCE=$1
-	Header always set Content-Security-Policy "default-src 'self'; script-src 'nonce-%{CSP_NONCE}e' 'strict-dynamic'; style-src 'self'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self';"
+	Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'nonce-%{CSP_NONCE}e' 'strict-dynamic'; style-src 'self'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self';"
 </IfModule>
 
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">

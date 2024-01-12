@@ -37,7 +37,9 @@ function isBookingDatumBeschikbaar($type, $aankomst, $vertrek) {
         $conn = null;
 
         // Return true als er geen overlappende resultaten zijn, anders False
+        var_dump($result['count'] == 0);
         return $result['count'] == 0;
+
     } catch (PDOException $e) {
         // Behandel database connectie errors
         die("Connectie mislukt: " . $e->getMessage());
