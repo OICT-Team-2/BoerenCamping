@@ -22,6 +22,10 @@ try {
         $stmt = $conn->prepare("INSERT INTO $table (aantalpersonen, type, aankomst, vertrek) 
         VALUES (:aantal, :type, :aankomst, :vertrek)");
 
+        include("beschikbaarheid-check.php");  
+
+        isBookingDatumBeschikbaar($aankomst, $vertrek);
+
         // Bind parameters
         $stmt->bindParam(':aantal', $aantal);
         $stmt->bindParam(':type', $type);

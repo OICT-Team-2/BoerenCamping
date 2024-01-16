@@ -1,6 +1,7 @@
 <!-- regel 2 tot 4 is hoe je een component include -->
 <?php
-  include("header.php")
+  include("header.php");
+  include("beschikbaar-check.php");
 ?>
   <img id="bghome" src="images/background_homescreen.png" alt="Background Image" />
 
@@ -23,7 +24,7 @@
       </div>
 
       <div class="formItem">
-        <label for="accomedatie"> Accomedatie Type</label>
+        <label for="type"> Accomedatie Type</label>
         <select name="type" id="type">
           <option value="Standaard Plaats">Standaard Plaats</option>
           <option value="Luxe Plaats">Luxe Plaats</option>
@@ -32,11 +33,11 @@
       </div>
 
       <div class="formItem">
-        <label for="aankomstdatum">aankomstdatum:</label>
+        <label for="aankomst">aankomstdatum:</label>
         <input type="datetime-local" id="aankomst" name="aankomst" />
       </div>
       <div class="formItem">
-        <label for="vertrekdatum">vertrekdatum:</label>
+        <label for="vertrek">vertrekdatum:</label>
         <input type="datetime-local" id="vertrek" name="vertrek" />
       </div>
 
