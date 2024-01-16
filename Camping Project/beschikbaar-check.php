@@ -1,6 +1,6 @@
 <?php
 
-function isBookingDatumBeschikbaar($type, $aankomst, $vertrek) {
+function isBookingDatumBeschikbaar($aankomst, $vertrek) {
     $servername = "localhost";
     $username = "max";
     $password = "Max=12345";
@@ -14,8 +14,7 @@ function isBookingDatumBeschikbaar($type, $aankomst, $vertrek) {
     // Vraag de database voor overlappende resultaten
         $query = "SELECT COUNT(*) as count 
                   FROM reservation_data
-                  WHERE 'Type' = ':type' 
-                  AND (:aankomst BETWEEN Aankomst AND Vertrek
+                  WHERE (:aankomst BETWEEN Aankomst AND Vertrek
                        OR :vertrek BETWEEN Aankomst AND Vertrek
                        OR Aankomst BETWEEN :aankomst AND :vertrek)";
 
@@ -23,7 +22,6 @@ function isBookingDatumBeschikbaar($type, $aankomst, $vertrek) {
         $stmt = $conn->prepare($query);
 
         // Bind parameters
-        $stmt->bindParam(':type', $type, PDO::PARAM_INT);
         $stmt->bindParam(':aankomst', $aankomst, PDO::PARAM_STR);
         $stmt->bindParam(':vertrek', $vertrek, PDO::PARAM_STR);
 
