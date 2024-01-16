@@ -3,9 +3,6 @@
 try {
     $conn = require_once('./db_conn.php');
 
-    // Zet de PDO error modus naar "exception"
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $aantal = $_POST["aantal"];
         $type = $_POST["type"];
@@ -13,12 +10,11 @@ try {
         $vertrek = $_POST["vertrek"];
 
         // Prepareer een SQL statement
-        $stmt = $conn->prepare("INSERT INTO $table (aantalpersonen, type, aankomst, vertrek) 
-        VALUES (:aantal, :type, :aankomst, :vertrek)");
+        $stmt = $conn->prepare("INSERT INTO reservation_data (aantalpersonen, type, aankomst, vertrek) VALUES (:aantal, :type, :aankomst, :vertrek)");
 
-        include("beschikbaarheid-check.php");  
+        // include("beschikbaarheid-check.php");  
 
-        isBookingDatumBeschikbaar($aankomst, $vertrek);
+        // isBookingDatumBeschikbaar($aankomst, $vertrek);
 
         // Bind parameters
         $stmt->bindParam(':aantal', $aantal);
@@ -42,4 +38,3 @@ try {
 // Sluit de connectie
 $conn = null;
 exit();
-?>

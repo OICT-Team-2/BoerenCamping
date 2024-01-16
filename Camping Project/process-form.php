@@ -66,4 +66,3 @@ try {
 // Sluit de connectie
 $conn = null;
 exit();
-?>

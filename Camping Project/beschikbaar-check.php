@@ -43,4 +43,4 @@ function isBookingDatumBeschikbaar($aankomst, $vertrek) {
         die("Connectie mislukt: " . $e->getMessage());
     }
 }
-?>
+
