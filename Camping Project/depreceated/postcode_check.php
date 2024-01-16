@@ -4,7 +4,7 @@ function isPostcodeGeldig($postcode) {
     $pattern = '/^\d{4} [a-zA-Z]{2}$/';
 
     // Gebruik preg_match om te checken of de postcode overeenkomt met het patroon
-    return preg_match($pattern, $postcode) === 1;
+    return preg_match($pattern, preg_replace('/ /i', '', $postcode)) === 1;
 }
 
 // Voorbeeld postcodes

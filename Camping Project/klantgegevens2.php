@@ -9,7 +9,6 @@ include("header.php")
   <form action="process-form.php" method="post">
     <fieldset>
       <legend>Persoonlijke Informatie</legend>
-
       <label for="voornaam">Voornaam:</label>
       <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
 

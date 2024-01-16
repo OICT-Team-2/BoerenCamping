@@ -1,13 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "max";
-$password = "Max=12345";
-$dbname = "camping_database";
-$table = "reservation_data";
 
 try {
-    // Connectie creëren
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = require_once('./db_conn.php');
 
     // Zet de PDO error modus naar "exception"
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

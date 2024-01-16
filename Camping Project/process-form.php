@@ -1,16 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "max";
-$password = "Max=12345";
-$dbname = "camping_database";
-$table = "customer_data";
-
 try {
-    // Connectie creëren
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-    // Zet de PDO error modus naar "exception"
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = require_once('./db_conn.php');
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $voornaam = $_POST["voornaam"];
