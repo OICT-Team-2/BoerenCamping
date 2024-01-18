@@ -16,27 +16,6 @@ try {
         $stmt = $conn->prepare("INSERT INTO customer_data (voornaam, achternaam, straatnaam, plaats, postcode, huisnummer, telefoonnummer, email) 
         VALUES (:voornaam, :achternaam, :straatnaam, :plaats, :postcode, :huisnummer, :telefoonnummer, :email)");
 
-        // // Bind parameters
-        // $patroon = '/[^a-zA-Z0-9 ]/';
-        // if (!preg_match($patroon, $voornaam)) {
-        //     // Goed
-        //     $voornaam_schoon = preg_replace($patroon, '', $voornaam);
-        // } else {
-        //     // Slecht
-        //     echo ("Ongeldig naam gedetecteerd!");
-        //     exit();
-        // }
-        // if (!preg_match($patroon, $achternaam)) {
-        //     // Goed
-        //     $achternaam_schoon = preg_replace($patroon, '', $achternaam);
-        // } else {
-        //     // Slecht
-        //     echo ("Ongeldig naam gedetecteerd!");
-        //     exit();
-        // }
-
-
-
         $stmt->bindParam(':voornaam', $voornaam);
         $stmt->bindParam(':achternaam', $achternaam);
         $stmt->bindParam(':plaats', $plaats);
