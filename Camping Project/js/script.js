@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 function updateBorderColor(inputElement, valid = false) {
   if (valid) {
     inputElement.style.border = '1px solid #ccc';
@@ -9,7 +7,6 @@ function updateBorderColor(inputElement, valid = false) {
   }
 }
 
->>>>>>> Stashed changes
 // form validation 
 
 function validateForm() {
@@ -96,7 +93,7 @@ if (postcode.value.trim() === '') {
  updateBorderColor(postcode);
 } else {
   // Postcode regex-patroon
-  const postcodePattern = /^[1-9][0-9]{3} [a-zA-Z]{2}$/;
+  const postcodePattern = /^[1-9][0-9]{3}( ?[a-zA-Z]{2})?$/;
 
   if (!postcodePattern.test(postcode.value)) {
     postcodeError.innerText = 'Ongeldige postcode';
