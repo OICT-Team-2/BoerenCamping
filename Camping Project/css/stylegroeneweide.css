@@ -233,26 +233,3 @@ input[type="submit"]:hover {
   color: red;
   font-size: small;
 }
-
-#voornaam[data-isvalid='false'],
-#achternaam[data-isvalid='false'],
-#plaats[data-isvalid='false'],
-#postcode[data-isvalid='false'],
-#straatnaam[data-isvalid='false'],
-#huisnummer[data-isvalid='false'],
-#telefoonnummer[data-isvalid='false'],
-#email[data-isvalid='false'] {
-  border: 1px solid red;
-}
-
-#voornaam[data-isvalid='true'],
-#achternaam[data-isvalid='true'],
-#plaats[data-isvalid='true'],
-#postcode[data-isvalid='true'],
-#straatnaam[data-isvalid='true'],
-#huisnummer[data-isvalid='true'],
-#telefoonnummer[data-isvalid='true'],
-#email[data-isvalid='true'] {
-  border: 1px solid #ccc;
-}
-
