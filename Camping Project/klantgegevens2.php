@@ -1,42 +1,51 @@
-<?php
-include("header.php")
-  ?>
+<?php include("header.php"); ?>
 
 <header>
   <h1 class="headerText">Klantgegevens Formulier</h1>
 </header>
+
 <main>
-  <form action="process-form.php" method="post">
+  <form id='form' action="process-form.php" method="post" onsubmit="return validateForm()">
     <fieldset>
       <legend>Persoonlijke Informatie</legend>
-      <label for="voornaam">Voornaam:</label>
-      <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
+
+      <label for="voornaam1">Voornaam:</label>
+      <div id="voornaamError" class="validation-error"></div>
+      <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam" data-isvalid="true">
 
       <label for="achternaam">Achternaam:</label>
-      <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam" required>
+      <div id="achternaamError" class="validation-error"></div>
+      <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam" data-isvalid="true" >
 
       <label for="plaats">Plaats:</label>
-      <input type="text" id="plaats" name="plaats" placeholder="Plaats" required>
+      <div id="plaatsError" class="validation-error"></div>
+      <input type="text" id="plaats" name="plaats" placeholder="Plaats" data-isvalid="true">
 
       <label for="postcode">Postcode:</label>
-      <input type="text" id="postcode" name="postcode" placeholder="Postcode" required>
+      <div id="postcodeError" class="validation-error"></div>
+      <input type="text" id="postcode" name="postcode" placeholder="Postcode" data-isvalid="true">
 
       <label for="straatnaam">Straat:</label>
-      <input type="text" id="straatnaam" name="straatnaam" placeholder="Straat" required>
+      <div id="straatnaamError" class="validation-error"></div>
+      <input type="text" id="straatnaam" name="straatnaam" placeholder="Straat" data-isvalid="true">
 
       <label for="huisnummer">Huisnummer:</label>
-      <input type="text" id="huisnummer" name="huisnummer" placeholder="Huisnummer" required>
+      <div id="huisnummerError" class="validation-error"></div>
+      <input type="text" id="huisnummer" name="huisnummer" placeholder="Huisnummer" data-isvalid="true">
 
       <label for="telefoonnummer">Telefoon:</label>
-      <input type="text" id="telefoonnummer" name="telefoonnummer" placeholder="Telefoon" required>
+      <div id="telefoonnummerError" class="validation-error"></div>
+      <input type="text" id="telefoonnummer" name="telefoonnummer" placeholder="Telefoon" data-isvalid="true">
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Email" required>
+      <div id="emailError" class="validation-error"></div>
+      <input type="text" id="email" name="email" placeholder="Email" data-isvalid="true">
     </fieldset>
 
     <input type="submit" value="Verzenden">
   </form>
 </main>
-<?php
-include("footer.php")
-  ?>
+
+<?php include("footer.php"); ?>
+
+
