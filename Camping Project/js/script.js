@@ -1,15 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var bar = document.querySelector(".reservationBar");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY >= barOffsetTop) {
-      bar.classList.add("sticky");
-    } else {
-      bar.classList.remove("sticky");
-    }
-  });
-});
-
 // form validation 
 
 function validateForm() {
