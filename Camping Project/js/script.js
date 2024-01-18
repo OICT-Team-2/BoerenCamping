@@ -1,3 +1,15 @@
+<<<<<<< Updated upstream
+=======
+function updateBorderColor(inputElement, valid = false) {
+  if (valid) {
+    inputElement.style.border = '1px solid #ccc';
+  }
+  else {
+    inputElement.style.border = '1px solid red';
+  }
+}
+
+>>>>>>> Stashed changes
 // form validation 
 
 function validateForm() {
@@ -10,7 +22,8 @@ let voornaamError = document.getElementById('voornaamError');
 if (voornaam.value.trim() === '') {
   voornaamError.innerText = 'Voornaam is verplicht';
   isValid = false;
-  voornaam.setAttribute('data-isvalid', isValid.toString());
+ 
+  updateBorderColor(voornaam);
 } else {
   // Voornaam regex-patroon (accepteert letters en eventueel spaties, streepjes en apostrofs)
   const voornaamPattern = /^[a-zA-Z\s'-]*$/;
@@ -18,9 +31,11 @@ if (voornaam.value.trim() === '') {
   if (!voornaamPattern.test(voornaam.value)) {
     voornaamError.innerText = 'Ongeldige voornaam';
     isValid = false;
-    voornaam.setAttribute('data-isvalid', isValid.toString());
+  
+    updateBorderColor(voornaam);
   } else {
     voornaamError.innerText = '';
+    updateBorderColor(voornaam,true);
 
   }
 }
@@ -32,7 +47,7 @@ let achternaamError = document.getElementById('achternaamError');
 if (achternaam.value.trim() === '') {
   achternaamError.innerText = 'Achternaam is verplicht';
   isValid = false;
-  achternaam.setAttribute('data-isvalid', isValid.toString());
+  updateBorderColor(achternaam);
 } else {
   // Achternaam regex-patroon (accepteert letters en eventueel spaties, streepjes en apostrofs)
   const achternaamPattern = /^[a-zA-Z\s'-]*$/;
@@ -40,9 +55,10 @@ if (achternaam.value.trim() === '') {
   if (!achternaamPattern.test(achternaam.value)) {
     achternaamError.innerText = 'Ongeldige achternaam';
     isValid = false;
-    achternaam.setAttribute('data-isvalid', isValid.toString());
+    updateBorderColor(achternaam);
   } else {
     achternaamError.innerText = '';
+    updateBorderColor(achternaam,true);
   }
 }
 
@@ -53,7 +69,7 @@ let plaatsError = document.getElementById('plaatsError');
 if (plaats.value.trim() === '') {
   plaatsError.innerText = 'Plaats is verplicht';
   isValid = false;
-  plaats.setAttribute('data-isvalid', isValid.toString());
+  updateBorderColor(plaats);
 } else {
   // Plaats regex-patroon (accepteert letters, spaties en eventuele andere speciale tekens)
   const plaatsPattern = /^[a-zA-Z\s\.,-]*$/;
@@ -61,9 +77,10 @@ if (plaats.value.trim() === '') {
   if (!plaatsPattern.test(plaats.value)) {
     plaatsError.innerText = 'Ongeldige plaats';
     isValid = false;
-    plaats.setAttribute('data-isvalid', isValid.toString());
+    updateBorderColor(plaats);
   } else {
     plaatsError.innerText = '';
+    updateBorderColor(plaats,true);
   }
 }
 
@@ -76,7 +93,7 @@ let postcodeError = document.getElementById('postcodeError');
 if (postcode.value.trim() === '') {
   postcodeError.innerText = 'Postcode is verplicht';
   isValid = false;
-  postcode.setAttribute('data-isvalid', isValid.toString());
+ updateBorderColor(postcode);
 } else {
   // Postcode regex-patroon
   const postcodePattern = /^[1-9][0-9]{3} [a-zA-Z]{2}$/;
@@ -84,9 +101,10 @@ if (postcode.value.trim() === '') {
   if (!postcodePattern.test(postcode.value)) {
     postcodeError.innerText = 'Ongeldige postcode';
     isValid = false;
-    postcode.setAttribute('data-isvalid', isValid.toString());
+    updateBorderColor(postcode);
   } else {
     postcodeError.innerText = '';
+    updateBorderColor(postcode,true);
   }
 }
 
@@ -98,7 +116,7 @@ let straatnaamError = document.getElementById('straatnaamError');
 if (straatnaam.value.trim() === '') {
   straatnaamError.innerText = 'Straatnaam is verplicht';
   isValid = false;
-  straatnaam.setAttribute('data-isvalid', isValid.toString());
+  updateBorderColor(straatnaam);
 } else {
   // Straatnaam regex-patroon (accepteert letters, spaties en eventuele andere speciale tekens)
   const straatnaamPattern = /^[a-zA-Z\s\d\.,-]*$/;
@@ -106,9 +124,10 @@ if (straatnaam.value.trim() === '') {
   if (!straatnaamPattern.test(straatnaam.value)) {
     straatnaamError.innerText = 'Ongeldige straatnaam';
     isValid = false;
-    straatnaam.setAttribute('data-isvalid', isValid.toString());
+    updateBorderColor(straatnaam);
   } else {
     straatnaamError.innerText = '';
+    updateBorderColor(straatnaam,true);
   }
 }
 
@@ -120,7 +139,7 @@ let huisnummerError = document.getElementById('huisnummerError');
 if (huisnummer.value.trim() === '') {
   huisnummerError.innerText = 'Huisnummer is verplicht';
   isValid = false;
-  huisnummer.setAttribute('data-isvalid', isValid.toString());
+  updateBorderColor(huisnummer);
 } else {
   // Huisnummer regex-patroon (voor Nederlandse huisnummers)
   const huisnummerPattern = /^([1-9]\d{0,3}[a-zA-Z]?)$/;
@@ -128,9 +147,10 @@ if (huisnummer.value.trim() === '') {
   if (!huisnummerPattern.test(huisnummer.value)) {
     huisnummerError.innerText = 'Ongeldig huisnummer';
     isValid = false;
-    huisnummer.setAttribute('data-isvalid', isValid.toString());
+    updateBorderColor(huisnummer);
   } else {
     huisnummerError.innerText = '';
+    updateBorderColor(huisnummer,true);
   }
 }
 
@@ -142,7 +162,7 @@ let telefoonnummerError = document.getElementById('telefoonnummerError');
 if (telefoonnummer.value.trim() === '') {
   telefoonnummerError.innerText = 'Telefoonnummer is verplicht';
   isValid = false;
-  telefoonnummer.setAttribute('data-isvalid', isValid.toString());
+  updateBorderColor(telefoonnummer);
 } else {
   // Telefoonnummer mag alleen cijfers bevatten en mag niet langer zijn dan 15 cijfers
   const telefoonnummerPattern = /^[0-9]+$/;
@@ -150,9 +170,10 @@ if (telefoonnummer.value.trim() === '') {
   if (!telefoonnummerPattern.test(telefoonnummer.value) || telefoonnummer.value.length > 15) {
     telefoonnummerError.innerText = 'Ongeldig telefoonnummer';
     isValid = false;
-    telefoonnummer.setAttribute('data-isvalid', isValid.toString());
+    updateBorderColor(telefoonnummer);
   } else {
     telefoonnummerError.innerText = '';
+    updateBorderColor(telefoonnummer,true);
   }
 }
 
@@ -165,7 +186,7 @@ let emailError = document.getElementById('emailError');
 if (email.value.trim() === '') {
   emailError.innerText = 'Email is verplicht';
   isValid = false;
-  email.setAttribute('data-isvalid', isValid.toString());
+  updateBorderColor(email);
 } else {
   // E-mailadres regex-patroon
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -173,9 +194,10 @@ if (email.value.trim() === '') {
   if (!emailPattern.test(email.value)) {
     emailError.innerText = 'Ongeldig e-mailadres';
     isValid = false;
-    email.setAttribute('data-isvalid', isValid.toString());
+    updateBorderColor(email);
   } else {
     emailError.innerText = '';
+    updateBorderColor(email,true);
   }
 }
 
