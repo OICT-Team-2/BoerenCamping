@@ -1,7 +1,7 @@
 <?php
   $servername = "localhost";
   $username = "root";
-  $password = "Snerro24!";
+  $password = "T&89!vS0R";
   $dbname = "camping_database";
 
   try {
