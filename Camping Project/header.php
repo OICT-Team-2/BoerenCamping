@@ -7,7 +7,6 @@
   <title>De Groene Weide</title>
   <link rel="stylesheet" href="css/stylegroeneweide.css" />
   <link rel="icon" type="image/x-icon" href="images/logo-no-background-no-text.ico" />
-  <!-- <iframe src="base.html" width="600" height="400" frameborder="0"></iframe> -->
 </head>
 
 <body>

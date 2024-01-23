@@ -1,4 +1,3 @@
-<!-- regel 2 tot 4 is hoe je een component include -->
 <?php
   include("header.php");
   include("beschikbaar-check.php");
