@@ -1,84 +1,243 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hey",
-          "How are you",
-          "Is anyone there?",
-          "Hello",
-          "Good day"
-        ],
-        "responses": [
-          "Hey :-)",
-          "Hello, thanks for visiting",
-          "Hi there, what can I do for you?",
-          "Hi there, how can I help?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye"],
-        "responses": [
-          "See you later, thanks for visiting",
-          "Have a nice day",
-          "Bye! Come back again soon."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-        "responses": ["Happy to help!", "Any time!", "My pleasure"]
-      },
-      {
-        "tag": "items",
-        "patterns": [
-          "Which items do you have?",
-          "What kinds of items are there?",
-          "What do you sell?"
-        ],
-        "responses": [
-          "We sell coffee and tea",
-          "We have coffee and tea"
-        ]
-      },
-      {
-        "tag": "payments",
-        "patterns": [
-          "Do you take credit cards?",
-          "Do you accept Mastercard?",
-          "Can I pay with Paypal?",
-          "Are you cash only?"
-        ],
-        "responses": [
-          "We accept VISA, Mastercard and Paypal",
-          "We accept most major credit cards, and Paypal"
-        ]
-      },
-      {
-        "tag": "delivery",
-        "patterns": [
-          "How long does delivery take?",
-          "How long does shipping take?",
-          "When do I get my delivery?"
-        ],
-        "responses": [
-          "Delivery takes 2-4 days",
-          "Shipping takes 2-4 days"
-        ]
-      },
-      {
-        "tag": "funny",
-        "patterns": [
-          "Tell me a joke!",
-          "Tell me something funny!",
-          "Do you know a joke?"
-        ],
-        "responses": [
-          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-          "What did the buffalo say when his son left for college? Bison."
-        ]
-      }
-    ]
-  }
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello there!",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "See you later, i hope you come and visit our camping soon!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank's a lot!"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure"
+      ]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "What do you sell?"
+      ],
+      "responses": [
+        "We sell coffee and tea",
+        "We have coffee and tea"
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "accomodations",
+      "patterns": [
+        "What accommodations are available at your farmhouse camping?"
+      ],
+      "responses": [
+        "We offer camping spots for tents and caravans and campers."
+      ]
+    },
+    {
+      "tag": "facilities",
+      "patterns": [
+        "What facilities does the camping provide for campers?"
+      ],
+      "responses": [
+        "We offer camping spots for tents and caravans and campers."
+      ]
+    },
+    {
+      "tag": "pets",
+      "patterns": [
+        "Can we bring our pets to the farmhouse camping?"
+      ],
+      "responses": [
+        "Yes, pets are welcome at our farmhouse camping. We even have special areas for animal lovers!"
+      ]
+    },
+    {
+      "tag": "activities",
+      "patterns": [
+        "Are there any activities or events planned during our stay at the campsite?"
+      ],
+      "responses": [
+        "We regularly organize farm tours, campfire evenings, and other fun activities. Check our event calendar for details."
+      ]
+    },
+    {
+      "tag": "reservation",
+      "patterns": [
+        "How do I make a reservation for a camping spot or accommodation?"
+      ],
+      "responses": [
+        "You can easily book online through our website or call us at 0104334657."
+      ]
+    },
+    {
+      "tag": "fire",
+      "patterns": [
+        "Are there specific rules regarding the use of open fire on the campsite?"
+      ],
+      "responses": [
+        "We allow open fires at designated areas. Please ensure it is used safely."
+      ]
+    },
+    {
+      "tag": "shop",
+      "patterns": [
+        "Can we purchase local products at the farm?",
+        "is there a shop at the farm?"
+      ],
+      "responses": [
+        "Certainly! Visit our farm shop for fresh products straight from the land."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "What are the check-in and check-out times at the campsite?"
+      ],
+      "responses": [
+        "Check-in is available from [12:00], and the check-out time is [11:00]."
+      ]
+    },
+    {
+      "tag": "wifi",
+      "patterns": [
+        "Is there WiFi available at the campsite?"
+      ],
+      "responses": [
+        "Yes, we offer free and secure Wi-Fi on the campsite grounds."
+      ]
+    },
+    {
+      "tag": "children",
+      "patterns": [
+        "Are there special amenities for families with children?"
+      ],
+      "responses": [
+        "We have playgrounds, child-friendly activities, and customized accommodations for families."
+      ]
+    },
+    {
+      "tag": "supermarkt",
+      "patterns": [
+        "How far is it to the nearest supermarket or shops?"
+      ],
+      "responses": [
+        "The nearest supermarket is in walking disctance from our camping. We also have a small camp store for basic needs."
+      ]
+    },
+    {
+      "tag": "hiking",
+      "patterns": [
+        "Are there hiking or biking trails near the campsite?"
+      ],
+      "responses": [
+        "There are several beautiful hiking and biking trails in the nearby area. Inquire at the reception for maps."
+      ]
+    },
+    {
+      "tag": "animals",
+      "patterns": [
+        "What types of animals are present on the farm?"
+      ],
+      "responses": [
+        "On our farm, you can meet sheep, chickens, cows, and even a few friendly goats."
+      ]
+    },
+    {
+      "tag": "shade",
+      "patterns": [
+        "Are there spots on the campsite with shade for tents or caravans?"
+      ],
+      "responses": [
+        "Yes, we have camping spots with shade for tents and caravans."
+      ]
+    },
+    {
+      "tag": "sanitation",
+      "patterns": [
+        "How is the sanitation on the campsite managed?"
+      ],
+      "responses": [
+        "Our modern sanitary facilities are well-maintained and clean."
+      ]
+    },
+    {
+      "tag": "packages",
+      "patterns": [
+        "Do you offer packages in collaboration with local attractions?"
+      ],
+      "responses": [
+        "There are several beautiful hiking and biking trails in the nearby area. Inquire at the reception for maps."
+      ]
+    },
+    {
+      "tag": "events",
+      "patterns": [
+        "Are there any seasonal events on the farm?"
+      ],
+      "responses": [
+        "Yes, we organize various seasonal events, such as harvest festivals and Christmas markets."
+      ]
+    },
+    {
+      "tag": "campfire",
+      "patterns": [
+        "Is there a place where we can make a campfire on the campsite?"
+      ],
+      "responses": [
+        "Yes, we have designated areas where you can safely make a campfire."
+      ]
+    },
+    {
+      "tag": "hiking",
+      "patterns": [
+        "How can we contact the campsite in case of questions or issues?"
+      ],
+      "responses": [
+        "You can reach us via email at 'info@groeneweidecamping.nl' or by phone at 0343-12345678. We are always ready to help!"
+      ]
+    }
+  ]
+}

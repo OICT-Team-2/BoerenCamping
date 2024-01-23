@@ -226,3 +226,10 @@ input[type="submit"]:hover {
   padding: 1em 0;
   width: max-content;
 }
+
+/* error messages */
+
+[id*=Error]{
+  color: red;
+  font-size: small;
+}

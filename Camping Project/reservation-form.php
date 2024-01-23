@@ -1,16 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "max";
-$password = "Max=12345";
-$dbname = "camping_database";
-$table = "reservation_data";
 
 try {
-    // Connectie creëren
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-    // Zet de PDO error modus naar "exception"
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = require_once('./db_conn.php');
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $aantal = $_POST["aantal"];
@@ -19,8 +10,11 @@ try {
         $vertrek = $_POST["vertrek"];
 
         // Prepareer een SQL statement
-        $stmt = $conn->prepare("INSERT INTO $table (aantalpersonen, type, aankomst, vertrek) 
-        VALUES (:aantal, :type, :aankomst, :vertrek)");
+        $stmt = $conn->prepare("INSERT INTO reservation_data (aantalpersonen, type, aankomst, vertrek) VALUES (:aantal, :type, :aankomst, :vertrek)");
+
+        // include("beschikbaarheid-check.php");  
+
+        // isBookingDatumBeschikbaar($aankomst, $vertrek);
 
         // Bind parameters
         $stmt->bindParam(':aantal', $aantal);
@@ -44,4 +38,3 @@ try {
 // Sluit de connectie
 $conn = null;
 exit();
-?>
