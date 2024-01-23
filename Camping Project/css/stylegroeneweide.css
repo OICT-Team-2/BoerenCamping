@@ -233,3 +233,7 @@ input[type="submit"]:hover {
   color: red;
   font-size: small;
 }
+.non-selectable {
+  color: #999;
+  pointer-events: none;
+}

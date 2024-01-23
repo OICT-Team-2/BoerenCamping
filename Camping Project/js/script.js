@@ -202,3 +202,55 @@ if (email.value.trim() === '') {
   return isValid;
 }
 
+// reserveringssysteem frontpagina
+
+// Eventlistener toevoegen aan het formulier
+document.querySelector('.form').addEventListener('submit', function (event) {
+  // Huidige datum en tijd verkrijgen
+  const currentDate = new Date();
+  
+  // Aankomstdatum en vertrekdatum uit de formulier-elementen halen
+  const aankomstDatum = new Date(document.getElementById('aankomst').value);
+  const vertrekDatum = new Date(document.getElementById('vertrek').value);
+
+  // Vergelijk de aankomstdatum met de huidige datum
+  if (aankomstDatum < currentDate) {
+    alert('U kunt niet in het verleden reserveren. Selecteer een geldige aankomstdatum.');
+    event.preventDefault(); // Voorkom het indienen van het formulier
+  }
+
+  // Vergelijk de vertrekdatum met de aankomstdatum
+  if (vertrekDatum <= aankomstDatum) {
+    alert('Vertrekdatum moet na aankomstdatum liggen. Selecteer een geldige vertrekdatum.');
+    event.preventDefault(); // Voorkom het indienen van het formulier
+  }
+});
+
+// niet langer dan een maand reserveren 
+// Eventlistener toevoegen aan het formulier
+document.querySelector('.form').addEventListener('submit', function (event) {
+  // Huidige datum en tijd verkrijgen
+  const currentDate = new Date();
+  
+  // Aankomstdatum en vertrekdatum uit de formulier-elementen halen
+  const aankomstDatum = new Date(document.getElementById('aankomst').value);
+  const vertrekDatum = new Date(document.getElementById('vertrek').value);
+
+  // Voeg een maand toe aan de aankomstdatum
+  const maxVertrekDatum = new Date(aankomstDatum);
+  maxVertrekDatum.setMonth(maxVertrekDatum.getMonth() + 1);
+
+  // Beperk de vertrekdatum op het huidige jaar
+  if (vertrekDatum.getFullYear() > currentDate.getFullYear()) {
+    alert('U kunt niet in het volgende jaar reserveren. Selecteer een geldige vertrekdatum.');
+    event.preventDefault(); // Voorkom het indienen van het formulier
+  } else if (vertrekDatum > maxVertrekDatum) {
+    alert('U kunt maximaal voor één maand reserveren. Selecteer een geldige vertrekdatum.');
+    event.preventDefault(); // Voorkom het indienen van het formulier
+  }
+});
+
+
+
+
+
