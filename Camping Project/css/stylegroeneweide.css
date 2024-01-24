@@ -88,7 +88,6 @@ li a:hover {
 .mom {
   width: 100%;
   padding: 0 3%;
-  ;
   /* Try setting this to 400px or something */
   display: table;
   border: 1px solid #444444;
@@ -114,7 +113,7 @@ li a:hover {
 }
 
 .reservationBar {
-  background-color: #00796B;
+  background-color: #00796b;
   margin: 0 10%;
   padding: 0 3%;
   height: 200px;
@@ -135,7 +134,7 @@ li a:hover {
   transform: translateX(-50%);
 }
 
-.reservationBar>* {
+.reservationBar > * {
   color: #ffffff;
 }
 
@@ -152,9 +151,9 @@ header {
   padding: 1em 0;
 }
 
-main {
+.main {
   max-width: 600px;
-  top: -160px;
+  top: -70px;
   position: relative;
   margin: 20px auto;
   color: black;
@@ -194,25 +193,46 @@ input {
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
 input[type="submit"] {
+  width: 30%;
   background-color: #00796b;
   color: #fff;
+  position: relative;
+  border-color: black;
+  border: 2px solid black;
+  right: 200px;
+  font-weight: bold;
   cursor: pointer;
-  margin: 15px auto;
+  margin: 1px auto;
 }
-
 input[type="submit"]:hover {
-  transition: 1s;
+  transition: 0.5s;
   background-color: #fca311;
 }
 
 .groeneweidebanner {
   text-align: center;
   width: 50%;
+}
+.optional {
+  font-size: 12px;
+  color: gray;
+}
+
+.headtext {
+  color: black;
+  left: 50%;
+  top: 140px;
+  font-size: 35px;
+  transform: translateX(-50%);
+  position: absolute;
+  text-align: center;
+  padding: 1em 0;
+  width: max-content;
 }
 
 .headerText {
@@ -227,7 +247,56 @@ input[type="submit"]:hover {
   width: max-content;
 }
 
-/* error messages */
+.ContactEmail {
+  margin-left: 130px;
+  position: relative;
+  top: 30px;
+}
+.ContactTelef {
+  margin-left: 130px;
+  position: relative;
+  top: 30px;
+}
+.google-map {
+  position: absolute;
+  left: 800px;
+  bottom: 160px;
+}
+#Btn {
+  width: 100px;
+  padding: 6px;
+  position: inherit;
+  border: none;
+  right: 250px;
+  font-weight: bold;
+  color: black;
+  background-color: #fca311;
+  cursor: pointer;
+  border-radius: 0.8rem;
+}
+
+.main1 {
+  max-width: 600px;
+  right: 300px;
+  bottom: 9px;
+  position: relative;
+  margin: 20px auto;
+  color: black;
+  padding: 1px;
+  height: 100%;
+}
+
+.fieldset2 textarea {
+  height: 180px;
+  width: 600px;
+  resize: none; /* This allows vertical resizing if needed */
+}
+
+.ContactAdr {
+  margin-left: 794px;
+  position: relative;
+  bottom: 795px;
+}
 
 [id*=Error]{
   color: red;
