@@ -17,7 +17,7 @@
       <hr />
       <li><a href="#overons">Over Ons</a></li>
       <hr />
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="contact.php">Contact</a></li>
       <hr /> 
     </ul>
   </div>
