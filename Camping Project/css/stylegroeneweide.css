@@ -57,8 +57,9 @@ li {
 }
 
 li a:hover {
-  /* background-color: #a8c4ab; */
-  color: rgb(27, 53, 36);
+  background-color: #a8c4ab;
+  color: rgb(224, 224, 224);
+  border-radius: 15px;
 }
 
 .navbar {
@@ -88,7 +89,6 @@ li a:hover {
 .mom {
   width: 100%;
   padding: 0 3%;
-  ;
   /* Try setting this to 400px or something */
   display: table;
   border: 1px solid #444444;
@@ -114,7 +114,7 @@ li a:hover {
 }
 
 .reservationBar {
-  background-color: #00796B;
+  background-color: #00796b;
   margin: 0 10%;
   padding: 0 3%;
   height: 200px;
@@ -122,7 +122,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 85%;
+  top: 80%;
   left: 40%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -152,9 +152,9 @@ header {
   padding: 1em 0;
 }
 
-main {
+.main {
   max-width: 600px;
-  top: -160px;
+  top: -70px;
   position: relative;
   margin: 20px auto;
   color: black;
@@ -194,25 +194,45 @@ input {
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
 input[type="submit"] {
   background-color: #00796b;
   color: #fff;
+  position: relative;
+  border: 1px solid black;
+  font-weight: bold;
   cursor: pointer;
-  margin: 15px auto;
+  margin: 20px auto;
 }
 
 input[type="submit"]:hover {
-  transition: 1s;
+  transition: 0.5s;
   background-color: #fca311;
 }
 
 .groeneweidebanner {
   text-align: center;
   width: 50%;
+}
+
+.optional {
+  font-size: 12px;
+  color: gray;
+}
+
+.headtext {
+  color: black;
+  left: 50%;
+  top: 140px;
+  font-size: 35px;
+  transform: translateX(-50%);
+  position: absolute;
+  text-align: center;
+  padding: 1em 0;
+  width: max-content;
 }
 
 .headerText {
@@ -227,9 +247,108 @@ input[type="submit"]:hover {
   width: max-content;
 }
 
-/* error messages */
+.ContactEmail {
+  margin-left: 130px;
+  position: relative;
+  top: 30px;
+}
 
-[id*=Error]{
+.ContactTelef {
+  margin-left: 130px;
+  position: relative;
+  top: 30px;
+}
+
+#Btn {
+  width: 100px;
+  padding: 6px;
+  position: inherit;
+  border: none;
+  right: 250px;
+  font-weight: bold;
+  color: black;
+  background-color: #fca311;
+  cursor: pointer;
+  border-radius: 0.8rem;
+}
+
+.main1 {
+  max-width: 600px;
+  right: 300px;
+  bottom: 9px;
+  position: relative;
+  margin: 20px auto;
+  color: black;
+  padding: 1px;
+  height: 100%;
+}
+
+.fieldset2 textarea {
+  height: 180px;
+  width: 600px;
+  resize: none;
+  /* This allows vertical resizing if needed */
+}
+
+.ContactAdr {
+  margin-left: 794px;
+  position: relative;
+  bottom: 795px;
+}
+
+[id*=Error] {
   color: red;
   font-size: small;
+}
+
+.non-selectable {
+  color: #999;
+  pointer-events: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00796b;
+  color: #000000;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.about-us {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Semi-transparante witte achtergrond */
+  border-radius: 10px;
+  /* Afgeronde hoeken voor de container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Schaduw voor de container */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bghome {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+  /* Plaats de achtergrondafbeelding achter de andere elementen */
+}
+
+.over_ons {
+  /* background-color: rgba(0, 0, 0, 0.7); Semi-transparante achtergrond voor tekstsectie */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; /* 100% van de viewporthoogte */
 }

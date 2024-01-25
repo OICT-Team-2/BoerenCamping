@@ -1,4 +1,3 @@
-<!-- regel 2 tot 4 is hoe je een component include -->
 <?php
   include("header.php");
   include("beschikbaar-check.php");
@@ -41,7 +40,7 @@
         <input type="datetime-local" id="vertrek" name="vertrek" />
       </div>
 
-      <div class="zoekbutton formItem">
+      <div class="formItem">
         <input type="submit" value="Reserveren">
       </div>
     </form>

@@ -7,18 +7,17 @@
   <title>De Groene Weide</title>
   <link rel="stylesheet" href="css/stylegroeneweide.css" />
   <link rel="icon" type="image/x-icon" href="images/logo-no-background-no-text.ico" />
-  <!-- <iframe src="base.html" width="600" height="400" frameborder="0"></iframe> -->
 </head>
 
 <body>
   <div class="navbar">
-    <h1>De Groene Weide</h1>
+    <a href="index.php"><h1>De Groene Weide</h1></a>
     <ul>
       <li><a href="index.php">Home</a></li>
       <hr />
       <li><a href="#overons">Over Ons</a></li>
       <hr />
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="contact.php">Contact</a></li>
       <hr /> 
     </ul>
   </div>
