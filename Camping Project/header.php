@@ -11,7 +11,7 @@
 
 <body>
   <div class="navbar">
-    <h1>De Groene Weide</h1>
+    <a href="index.php"><h1>De Groene Weide</h1></a>
     <ul>
       <li><a href="index.php">Home</a></li>
       <hr />

@@ -40,7 +40,7 @@
         <input type="datetime-local" id="vertrek" name="vertrek" />
       </div>
 
-      <div class="zoekbutton formItem">
+      <div class="formItem">
         <input type="submit" value="Reserveren">
       </div>
     </form>

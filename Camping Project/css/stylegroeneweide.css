@@ -57,8 +57,9 @@ li {
 }
 
 li a:hover {
-  /* background-color: #a8c4ab; */
-  color: rgb(27, 53, 36);
+  background-color: #a8c4ab;
+  color: rgb(224, 224, 224);
+  border-radius: 15px;
 }
 
 .navbar {
@@ -134,7 +135,7 @@ li a:hover {
   transform: translateX(-50%);
 }
 
-.reservationBar > * {
+.reservationBar>* {
   color: #ffffff;
 }
 
@@ -198,17 +199,15 @@ input {
 }
 
 input[type="submit"] {
-  width: 30%;
   background-color: #00796b;
   color: #fff;
   position: relative;
-  border-color: black;
-  border: 2px solid black;
-  right: 200px;
+  border: 1px solid black;
   font-weight: bold;
   cursor: pointer;
-  margin: 1px auto;
+  margin: 20px auto;
 }
+
 input[type="submit"]:hover {
   transition: 0.5s;
   background-color: #fca311;
@@ -218,6 +217,7 @@ input[type="submit"]:hover {
   text-align: center;
   width: 50%;
 }
+
 .optional {
   font-size: 12px;
   color: gray;
@@ -252,6 +252,7 @@ input[type="submit"]:hover {
   position: relative;
   top: 30px;
 }
+
 .ContactTelef {
   margin-left: 130px;
   position: relative;
@@ -285,7 +286,8 @@ input[type="submit"]:hover {
 .fieldset2 textarea {
   height: 180px;
   width: 600px;
-  resize: none; /* This allows vertical resizing if needed */
+  resize: none;
+  /* This allows vertical resizing if needed */
 }
 
 .ContactAdr {
@@ -294,10 +296,11 @@ input[type="submit"]:hover {
   bottom: 795px;
 }
 
-[id*=Error]{
+[id*=Error] {
   color: red;
   font-size: small;
 }
+
 .non-selectable {
   color: #999;
   pointer-events: none;
@@ -309,7 +312,7 @@ footer {
   left: 0;
   width: 100%;
   background-color: #00796b;
-  color: #999;
+  color: #000000;
   text-align: center;
   padding: 1em 0;
 }
@@ -318,9 +321,12 @@ footer {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparante witte achtergrond */
-  border-radius: 10px; /* Afgeronde hoeken voor de container */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schaduw voor de container */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Semi-transparante witte achtergrond */
+  border-radius: 10px;
+  /* Afgeronde hoeken voor de container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Schaduw voor de container */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -332,5 +338,6 @@ footer {
   height: 75vh;
   object-fit: cover;
   position: relative;
-  z-index: -1; /* Plaats de achtergrondafbeelding achter de andere elementen */
+  z-index: -1;
+  /* Plaats de achtergrondafbeelding achter de andere elementen */
 }
